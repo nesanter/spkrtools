@@ -10,9 +10,9 @@ fc = fs * y.sqrt(1 + Vas / Vc)
 f3 = fc * y.sqrt((Qtc ** -2 - 2 + y.sqrt((Qtc ** -2 - 2) ** 2 + 4)) / 2)
 
 # dbSPL for Xmax at given frequency
-Ro_c = 1.18 / 345.0 # constant
+Ro_c = y.Rational(1.18, 345.0) # constant
 Vd = sD * y.pi / 4 * Xmax / 1e7
-Xspl = 112 + 10 * y.log(4 * y.pi ** 3 * Ro_c * Vd ** 2 * hz ** 4) / y.log(10)
+Xspl = y.RealNumber(112) + 10 * y.log(4 * y.pi ** 3 * Ro_c * Vd ** 2 * hz ** 4) / y.log(10)
 
 # high frequency
 hf_f3 = 1 / y.sqrt(Mmd * (1/(1/(Le / (Bl ** 2)) + (1/Cms))))
